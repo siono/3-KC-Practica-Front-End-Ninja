@@ -1,0 +1,5 @@
+# Carpeta a ignorar
+node_modules/
+
+# La carpeta dist no forma parte del repo
+dist/
