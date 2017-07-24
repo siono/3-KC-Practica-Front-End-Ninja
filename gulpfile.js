@@ -60,7 +60,7 @@ gulp.task("html",function(){
 
 // compilar y generar un único javascript
 gulp.task("js", function(){
-    gulp.src("src/js/main.js")
+    gulp.src(["src/js/main.js","src/js/header.js"])
         .pipe(tap(function(file){ // tap nos permite ejecutar una función por cada fichero seleccionado en gulp.src
             // reemplazamos el contenido del fichero por lo que nos devuelve browserify pasándole el fichero
             file.contents = browserify(file.path,{debug:true}) // creamos una instancia de browserify en base al archivo y generamos el sourcemaps
@@ -79,6 +79,8 @@ gulp.task("js", function(){
         .pipe(notify("JS Compilado"));
 });
 
+
+
 //font-bootstrap
 gulp.task("copy_bootstrap_fonts",function(){
     gulp.src("node_modules/bootstrap-sass/assets/fonts/bootstrap/*")
@@ -92,6 +94,5 @@ gulp.task("copy_font-awesome_fonts",function(){
 });
 
 //tarea que copia todas las fuentes
-gulp.task("copy_fonts",["copy_bootstrap_fonts","copy_font-awesome_fonts"],function(){});
-
+gulp.task("copy_fonts",["copy_bootstrap_fonts","copy_font-awesome_fonts"]);
 
