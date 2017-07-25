@@ -16,7 +16,7 @@ var concat = require('gulp-concat'); //concatena ficheros
 
 
 //definir la tarea por defecto
-gulp.task("default",["html","copy_fonts","sass","js"], function(){
+gulp.task("default",["sass","fonts","html","js"], function(){
 
     //iniciamos el servidor de desarrollo
     browserSync.init({server: "dist/"}); // arranca el servidor en la carpeta src
@@ -42,8 +42,9 @@ gulp.task("sass",function(){
             autoprefixer(), //transforma el css dandole compatibilidad a navegadores antiguos
             cssnano() //comprime/minifica el CSS
         ]))
+        .pipe(concat('style.css'))
         .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest("dist/")) //guardamos el resultado en dist
+        .pipe(gulp.dest("dist/css")) //guardamos el resultado en dist
         .pipe(browserSync.stream()) //recargue el CSS del navegador
         .pipe(notify("SASS Compilado 🤠")); //notificación 
 });
@@ -59,8 +60,13 @@ gulp.task("html",function(){
 });
 
 // compilar y generar un único javascript
-gulp.task("js", function(){
-    gulp.src(["src/js/main.js","src/js/header.js"])
+
+gulp.task('js', function() {
+    gulp.src([
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/bootstrap/dist/js/bootstrap.js',
+            'src/js/**/*.js'
+        ])
         .pipe(tap(function(file){ // tap nos permite ejecutar una función por cada fichero seleccionado en gulp.src
             // reemplazamos el contenido del fichero por lo que nos devuelve browserify pasándole el fichero
             file.contents = browserify(file.path,{debug:true}) // creamos una instancia de browserify en base al archivo y generamos el sourcemaps
@@ -72,27 +78,21 @@ gulp.task("js", function(){
         }))
         .pipe(buffer()) // convertimos a buffer para que funcione el siguiente pipe
         .pipe(sourcemaps.init({loadMaps: true})) //captura los courcempas del archivo fuente
-        .pipe(uglify()) //minificamos el JavaScript
-        .pipe(sourcemaps.write('/')) //guarda los sourcemaps en el mismo directorio que el archivo fuente
-        .pipe(gulp.dest("dist/")) // lo guardamos en la carpeta dist
-        .pipe(browserSync.stream()) // recargamos el navegador
-        .pipe(notify("JS Compilado"));
+        .pipe(uglify())
+        .pipe(concat('script.js'))
+        .pipe(gulp.dest('dist/js'));
 });
 
 
-
-//font-bootstrap
-gulp.task("copy_bootstrap_fonts",function(){
-    gulp.src("node_modules/bootstrap-sass/assets/fonts/bootstrap/*")
-        .pipe(gulp.dest("dist/fonts/bootstrap"))
+/**
+ * Mueve fonts de bootstrap y los que haya en la carpeta src/fonts/ a dist/fonts
+ */
+gulp.task('fonts', function() {
+    gulp.src([
+            'node_modules/bootstrap-sass/assets/fonts/**/*',
+            'src/fonts/*'
+        ])
+        .pipe(gulp.dest('dist/fonts/'));
 });
 
-// font-awesome
-gulp.task("copy_font-awesome_fonts",function(){
-    gulp.src("src/fonts/font-awesome/*")
-        .pipe(gulp.dest("dist/fonts/font-awesome"))
-});
-
-//tarea que copia todas las fuentes
-gulp.task("copy_fonts",["copy_bootstrap_fonts","copy_font-awesome_fonts"]);
 

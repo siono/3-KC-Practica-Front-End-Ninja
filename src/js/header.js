@@ -1,4 +1,5 @@
-    $(function () {
+const $ = require("jquery");
+$(function () {
         // Remove Search if user Resets Form or hits Escape!
 		$('body, .navbar-collapse form[role="search"] button[type="reset"]').on('click keyup', function(event) {
 			console.log(event.currentTarget);
