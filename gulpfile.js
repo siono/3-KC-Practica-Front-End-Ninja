@@ -62,11 +62,9 @@ gulp.task("html",function(){
 // compilar y generar un único javascript
 
 gulp.task('js', function() {
-    gulp.src([
-            'node_modules/jquery/dist/jquery.js',
-            'node_modules/bootstrap/dist/js/bootstrap.js',
+    gulp.src(
             'src/js/**/*.js'
-        ])
+        )
         .pipe(tap(function(file){ // tap nos permite ejecutar una función por cada fichero seleccionado en gulp.src
             // reemplazamos el contenido del fichero por lo que nos devuelve browserify pasándole el fichero
             file.contents = browserify(file.path,{debug:true}) // creamos una instancia de browserify en base al archivo y generamos el sourcemaps
@@ -90,7 +88,7 @@ gulp.task('js', function() {
 gulp.task('fonts', function() {
     gulp.src([
             'node_modules/bootstrap-sass/assets/fonts/**/*',
-            'src/fonts/*'
+            'src/fonts/**/*'
         ])
         .pipe(gulp.dest('dist/fonts/'));
 });
