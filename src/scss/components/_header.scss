@@ -1,94 +1,76 @@
-	body {
-		padding: 50px 0px;
-	}
-	.navbar-collapse {
-		position: relative;
-		padding-top: 30px !important;
-		max-height: 270px;
-	}
-	.navbar-collapse form[role="search"] {
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		width: 100%;
-		padding: 0px;
-		margin: 0px;
-		z-index: 0;
-	}
-	.navbar-collapse form[role="search"] button,
-	.navbar-collapse form[role="search"] input {
-		padding: 8px 12px;
-		border-radius: 0px;
-		border-width: 0px;
-		color: rgb(119, 119, 119);
-		background-color: rgb(248, 248, 248);
-		border-color: rgb(231, 231, 231);
-		box-shadow: none;
-		outline: none;
-	}
-	.navbar-collapse form[role="search"] input {
-		padding: 16px 12px;
-		font-size: 14pt;
-		font-style: italic;
-		color: rgb(160, 160, 160);
-		box-shadow: none;
-	}
-	.navbar-collapse form[role="search"] button[type="reset"] {
-		display: none;
+    .navbar-brand-centered {
+    	position: absolute;
+    	left: 50%;
+    	display: block;
+    	width: 160px;
+    	text-align: center;
+    	background-color: transparent;
+    }
+
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+    	margin-left: -160px;
+    }
+
+    .navbar-brand {
+    	padding: 0px;
+    }
+
+    .navbar-brand>img {
+    	height: 100%;
+    	width: auto;
 	}
 	
-	button.btn.btn-default.dropdown-toggle {
-    display: none;
+	//navbar
+	nav.navbar.fixed-top.navbar-default{
+		border-bottom: 3px solid #CFA03C;
+		background: transparent;
+		margin-bottom:0px;
 	}
 
-	.input-group-btn button[type="reset"]{
-		line-height:0 !important;
+	input.form-control{
+		height: 33px;
 	}
 
-	
-	/* Dispositibos mayores de 768px*/
+	//DISPOSITIVOS "GRANDES".
 	@media (min-width: 768px) {
-
-		.navbar-collapse {
-			padding-top: 0px !important;
-			padding-right: 38px !important;
-		}
-		.navbar-collapse form[role="search"] {
-			width: 38px;
-		}
-		.navbar-collapse form[role="search"] button,
-		.navbar-collapse form[role="search"] input {
-			padding: 15px 12px;
-		}
-		.navbar-collapse form[role="search"] input {
-			padding: 25px 12px;
-			font-size: 18pt;
-			opacity: 0;
-			display: none;
-		}
-		.navbar-collapse form[role="search"].active {
-			width: 100%;
-		}
-		.navbar-collapse form[role="search"].active button,
-		.navbar-collapse form[role="search"].active input {
-			display: table-cell;
-			opacity: 1;
-		}
-    	.navbar-collapse form[role="search"].active input {
-			width: 100%;
-		}
-
-		.search-panel {
-			opacity: 0;
-			display: none;
-		}
-
-		.navbar-collapse form[role="search"].active .search-panel{
-			display: table-cell;
-			opacity: 1;
-		}
-
-		.navbar-form > .input-group{
-			float: right;
-		}
+	//para que el contenido se pegue lo máx. a los margenes para estar alineados con el contenedor de datos
+	.container>.navbar-collapse, .container>.navbar-header{
+		margin-right: -30px !important;
+    	margin-left: -30px !important;
 	}
+
+	.navbar-left {
+    	float: left!important;
+    	margin-left: -15px;
+	}
+
+	}
+
+	//Visualiamos menu minimizado en dispositivos menores de 991px;
+	@media (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+
+	@media (max-width: 768px) {
+	  //ocultamos en filtro en dispositivos menores a 768	
+	  #filter-botton{
+		  display:none;
+	  }
+	  .input-group{
+		  padding: 0 5px;
+	  }
+	}
+
+	
+}
