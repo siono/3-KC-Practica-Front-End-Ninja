@@ -2,14 +2,14 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "font-awesome/font-awesome.scss";
 
+//variables
+@import "variables.scss";
 
 //Components
 @import "components/header";
 
 
-// color letra: #3a3a3a
-
 .wrapper {
     height: 100vh;
-    background: #f2e6ca;
+    background: #fff8ea;
 }

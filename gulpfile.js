@@ -16,7 +16,7 @@ var concat = require('gulp-concat'); //concatena ficheros
 
 
 //definir la tarea por defecto
-gulp.task("default", ["sass", "fonts", "html", "js"], function () {
+gulp.task("default", ["sass", "fonts", "html", "js", "img"], function () {
 
     //iniciamos el servidor de desarrollo
     browserSync.init({
@@ -101,4 +101,12 @@ gulp.task('fonts', function () {
             'src/fonts/**/*'
         ])
         .pipe(gulp.dest('dist/fonts/'));
+});
+
+/**
+ * Mueve las imagenes
+ */
+gulp.task('img', function () {
+    gulp.src('src/images/**/*')
+        .pipe(gulp.dest('dist/images/'));
 });
