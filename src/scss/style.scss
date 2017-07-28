@@ -2,14 +2,8 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "font-awesome/font-awesome.scss";
 
-//variables
 @import "variables.scss";
+@import "html-tag.scss";
 
 //Components
 @import "components/header";
-
-
-.wrapper {
-    height: 100vh;
-    background: #fff8ea;
-}

@@ -1,76 +1,57 @@
-    .navbar-brand-centered {
-    	position: absolute;
-    	left: 50%;
-    	display: block;
-    	width: 160px;
-    	text-align: center;
-    	background-color: transparent;
-    }
-
-    .navbar>.container .navbar-brand-centered,
-    .navbar>.container-fluid .navbar-brand-centered {
-    	margin-left: -160px;
-    }
-
-    .navbar-brand {
-    	padding: 0px;
-    }
-
-    .navbar-brand>img {
-    	height: 100%;
-    	width: auto;
-	}
-	
-	//navbar
-	nav.navbar.fixed-top.navbar-default{
-		border-bottom: 3px solid $second_color;
+	//LOGO CENTRADO
+	.navbar-brand {
+		padding: 0px;
+		& img {
+			height: 100%;
+			width: auto;
+		}
+		&.navbar-brand-centered {
+			position: absolute;
+			left: 50%;
+			margin-left: -154px !important;
+		}
+	} //navbar
+	nav.navbar.fixed-top.navbar-default {
+		border-bottom: 3px solid $color-gold;
 		background: transparent;
-		margin-bottom:0px;
-	}
-
-	input.form-control{
+		margin-bottom: 0px;
+	} //Formulario
+	input.form-control {
 		height: 33px;
 	}
 
-	//DISPOSITIVOS "GRANDES".
-	@media (min-width: 768px) {
-	//para que el contenido se pegue lo máx. a los margenes para estar alineados con el contenedor de datos
-	.container>.navbar-collapse, .container>.navbar-header{
-		margin-right: -30px !important;
-    	margin-left: -30px !important;
+	.navbar-left .navbar-form {
+		padding: 0px;
+	} //DISPOSITIVOS "GRANDES".
+	@media (min-width: $screen-sm-min) {
+		//para que el contenido se pegue lo máx. a los margenes para estar alineados con el contenedor de datos
+		.container>.navbar-collapse,
+		.container>.navbar-header {
+			margin-right: -30px !important;
+			margin-left: -30px !important;
+		}
+	} //Visualiamos menu minimizado en dispositivos menores de 991px;
+	@media (max-width: $screen-md-min) {
+		.navbar-collapse.collapse {
+			display: none !important;
+		}
+		.navbar-collapse.collapse.in {
+			display: block !important;
+		}
+		.navbar-header .collapse,
+		.navbar-toggle {
+			display: block !important;
+		}
+		.navbar-header {
+			float: none;
+		}
+		@media (max-width: $screen_sm_min) {
+			//ocultamos en filtro en dispositivos menores a 768	
+			#filter-botton {
+				display: none;
+			}
+			.navbar-form {
+				margin: 0 5px;
+			}
+		}
 	}
-
-	.navbar-left {
-    	float: left!important;
-    	margin-left: -15px;
-	}
-
-	}
-
-	//Visualiamos menu minimizado en dispositivos menores de 991px;
-	@media (max-width: 991px) {
-    .navbar-collapse.collapse {
-        display: none !important;
-    }
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    .navbar-header .collapse, .navbar-toggle {
-        display:block !important;
-    }
-    .navbar-header {
-        float:none;
-    }
-
-	@media (max-width: 768px) {
-	  //ocultamos en filtro en dispositivos menores a 768	
-	  #filter-botton{
-		  display:none;
-	  }
-	  .input-group{
-		  padding: 0 5px;
-	  }
-	}
-
-	
-}
