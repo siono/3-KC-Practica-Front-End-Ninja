@@ -1,5 +1,6 @@
 var $ = require('jquery');
 
+
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // Si la pagina hace scroll >= 50px
         $('#return-to-top').fadeIn(200);    // Muestro la flecha
