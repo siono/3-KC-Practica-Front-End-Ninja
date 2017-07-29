@@ -10,19 +10,25 @@
 			left: 50%;
 			margin-left: -154px !important;
 		}
-	} //navbar
+	} 
+	
+	//navbar
 	nav.navbar.fixed-top.navbar-default {
 		border-bottom: 3px solid $color-gold;
 		background: transparent;
 		margin-bottom: 0px;
-	} //Formulario
+	} 
+	
+	//Formulario
 	input.form-control {
 		height: 33px;
 	}
 
 	.navbar-left .navbar-form {
 		padding: 0px;
-	} //DISPOSITIVOS "GRANDES".
+	} 
+	
+	//DISPOSITIVOS "GRANDES".
 	@media (min-width: $screen-sm-min) {
 		//para que el contenido se pegue lo máx. a los margenes para estar alineados con el contenedor de datos
 		.container>.navbar-collapse,
@@ -30,7 +36,9 @@
 			margin-right: -30px !important;
 			margin-left: -30px !important;
 		}
-	} //Visualiamos menu minimizado en dispositivos menores de 991px;
+	} 
+	
+	//Visualiamos menu minimizado en dispositivos menores de 991px;
 	@media (max-width: $screen-md-min) {
 		.navbar-collapse.collapse {
 			display: none !important;
@@ -45,13 +53,14 @@
 		.navbar-header {
 			float: none;
 		}
-		@media (max-width: $screen_sm_min) {
-			//ocultamos en filtro en dispositivos menores a 768	
-			#filter-botton {
-				display: none;
-			}
-			.navbar-form {
-				margin: 0 5px;
-			}
+	}
+	
+	@media (max-width: $screen_sm_min) {
+		//ocultamos en filtro en dispositivos menores a 768	
+		#filter-botton {
+			display: none;
+		}
+		.navbar-form {
+			margin: 0 5px;
 		}
 	}
