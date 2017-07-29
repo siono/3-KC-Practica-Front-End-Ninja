@@ -1,4 +1,6 @@
-
+.item-list{
+    margin-bottom: 50px;
+}
 
 .title{
     border-bottom: 1px solid $color-border-item;
@@ -13,7 +15,9 @@ article{
 .item{
     border: 1px solid $color-border-item;
     padding-left: 0px !important;
-    & img.thumb{
+    max-height: 613px;
+    
+    & .thumb{
         width:100%;
         height: 250px;
     }
@@ -61,6 +65,19 @@ article{
 .publication_date i{
     margin-right: 5px;
 }
+
+.text-info{
+    height: 265px; 
+}
+
+.pagination li a{
+    color: $color-text;
+    &:hover{
+        color: $color-gold;
+    }
+}
+
+
 
 
 
