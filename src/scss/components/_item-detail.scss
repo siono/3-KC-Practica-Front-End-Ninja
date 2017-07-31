@@ -49,13 +49,14 @@
             border-radius: 50%;
             width:65px;
             height:65px;
-            float:left;
+            //float:left;
+            margin:20px auto;
             
         }
 
         & .info {
-            border-top: 1px solid #cacbcc;
-            padding-top: 8px;
+            //border-top: 1px solid #cacbcc;
+            //padding-top: 8px;
             width: 80%;
             overflow: hidden;
             & .autor-info{
@@ -65,7 +66,7 @@
         & .autor-social{
             
             font-size: 17px;
-            & .comments{
+            & .go-comments{
                 float: left;
             }
             & .likes{
