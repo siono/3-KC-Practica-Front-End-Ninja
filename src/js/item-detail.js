@@ -12,3 +12,8 @@ $(".go-comments").click(function() {
         scrollTop: $("#comments-list").offset().top
     }, 1000);
 });
+
+$(".likes").on("click",function(){
+    console.log(this);
+    $(this).find("i").toggleClass("fa-heart fa-heart-o");
+});

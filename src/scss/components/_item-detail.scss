@@ -49,14 +49,10 @@
             border-radius: 50%;
             width:65px;
             height:65px;
-            //float:left;
-            margin:20px auto;
-            
+            margin:20px auto; 
         }
 
         & .info {
-            //border-top: 1px solid #cacbcc;
-            //padding-top: 8px;
             width: 80%;
             overflow: hidden;
             & .autor-info{
@@ -81,3 +77,11 @@
 
 }
 
+.fa-heart{
+    color: $color-like;
+}
+
+
+//ocultamos iniciamente el mensaje de exito del formulario.
+
+#success_message{ display: none;}

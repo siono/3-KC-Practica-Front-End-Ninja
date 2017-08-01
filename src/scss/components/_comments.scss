@@ -3,16 +3,15 @@
     color:$color-text;
     font-size: 18px;
     margin: 20px 0px;
-    border-bottom: 1px solid $color-text;
+    border-bottom: 1px solid lighten($color-text, 40%);;
 }
 
 
 .comment {
     overflow: hidden;
     padding: 0 0 1em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $color-separator;
     margin: 0 0 1em;
-    *zoom: 1;
 }
 
 .comment-img {
@@ -32,9 +31,9 @@
 
 .comment .text {
     padding: 10px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid $color-separator;
     border-radius: 5px;
-    background: #fff;
+    background: $color-main;
 }
 
 
@@ -45,7 +44,7 @@
 .comment .attribution {
     margin: 0.5em 0 0;
     font-size: 14px;
-    color: #666;
+    color: $color-text;
 }
 
 .comments,
@@ -68,16 +67,17 @@
     height: 9px;
     border-width: 0 0 1px 1px;
     border-style: solid;
-    border-color: #e5e5e5;
-    background: #fff;
+    border-color: $color-separator;
+    background: $color-main;
     transform: rotate(45deg);
 }
 
 form.newcomments{
     padding: 30px;
-    background-color: lighten($color-text, 60%);
+    background-color: lighten($color-text, 65%);
     border-radius: 5px;
     margin-bottom: 60px;
+    border:1px solid lighten($color-text, 40%);
 }
 
 .center-submit{
