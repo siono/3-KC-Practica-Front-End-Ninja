@@ -46,24 +46,28 @@
         <div class="alert alert-success" role="alert" id="success_message"><i class="glyphicon glyphicon-thumbs-up"></i> Se ha introducido su comentario correctamente!.</div>
 
         <!-- Formulario Insertar comentario -->
-        <form action="" class="newcomments" id="comment-form">
+        <form class="newcomments" id="comment-form">
+             
             <div class="form-group">
                 <label for="nombre" class="col-2 col-form-label">Nombre</label>
                 <div class="col-10">
-                    <input class="form-control" type="text" id="nombre" required>
+                    <input class="form-control" type="text" name="nombre" data-minlength="3" data-error="Debe de contener un mín. de 3 letras" required />
+                    <div class="help-block with-errors"></div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="apellidos" class="col-2 col-form-label">Apellidos</label>
                 <div class="col-10">
-                    <input class="form-control" type="text" id="apellidos" required>
+                    <input class="form-control" type="text" id="apellidos" name="apellidos" required/>
+                    <div class="help-block with-errors"></div>
                 </div>
                 
             </div>
             <div class="form-group">
                 <label for="email" class="col-2 col-form-label">Email</label>
                 <div class="col-10">
-                    <input class="form-control" type="email" placeholder="bootstrap@example.com" id="email" required>
+                    <input class="form-control" type="email" placeholder="bootstrap@example.com" id="email" data-error="Debe de introducir una dirección de email válida" required>
+                    <div class="help-block with-errors"></div>
                 </div>
                 
             </div>
@@ -71,12 +75,14 @@
                 <label for="url_avatar" class="col-2 col-form-label">Avatar</label>
                 <div class="col-10">
                     <input class="form-control" type="url" placeholder="Introduce url avatar" id="url_avatar">
+                    <div class="help-block with-errors"></div>
                 </div>
                 
             </div>
             <div class="form-group">
                 <label for="mensaje">Mensaje</label>
-                <textarea class="form-control" id="mensaje" placeholder="Escribir un comentario" rows="3"></textarea>
+                <textarea class="form-control" id="mensaje" placeholder="Escribir un comentario" rows="3" data-maxword120 required></textarea>
+                <div class="help-block with-errors"></div>
             </div>
             <button type="submit" class="btn center-submit">Enviar</button>
         </form>

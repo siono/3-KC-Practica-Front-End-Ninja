@@ -67,7 +67,7 @@ gulp.task("html", function () {
 
 gulp.task('js', function () {
     gulp.src(
-            'src/js/**/*.js'
+            'src/js/main.js'
         )
         .pipe(tap(function (file) { // tap nos permite ejecutar una función por cada fichero seleccionado en gulp.src
             // reemplazamos el contenido del fichero por lo que nos devuelve browserify pasándole el fichero
@@ -86,9 +86,11 @@ gulp.task('js', function () {
         .pipe(sourcemaps.init({
             loadMaps: true
         })) //captura los courcempas del archivo fuente
-        .pipe(uglify())
-        .pipe(concat('script.js'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(uglify()) //minificamos el JavaScript
+        .pipe(sourcemaps.write('/')) //guarda los sourcemaps en el mismo directorio que el archivo fuente
+        .pipe(gulp.dest("dist/js")) // lo guardamos en la carpeta dist
+        .pipe(browserSync.stream()) // recargamos el navegador
+        .pipe(notify("JS Compilado"));
 });
 
 

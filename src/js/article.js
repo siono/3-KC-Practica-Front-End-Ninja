@@ -1,5 +1,7 @@
 var $ = require('jquery');
 
+console.log("Article.js");
+
 $(".go-article-content").click(function() {
     $('html, body').animate({
         scrollTop: $("#main-content").offset().top
