@@ -18,7 +18,7 @@ $(document).ready(function(){
         }
   }).on('submit', function (e) {
   if (e.isDefaultPrevented()) {
-    // handle the invalid form...
+    //Error formulario
   } else {
     //Exito
     $('#success_message').slideDown({ opacity: "show" }, "slow"); // Mostramos mensaje de exito.
