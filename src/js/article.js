@@ -42,7 +42,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("1")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -110,7 +110,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("2")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -157,7 +157,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("3")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -211,7 +211,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("4")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -256,7 +256,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("5")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -327,7 +327,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("6")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -374,7 +374,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("7")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -428,7 +428,7 @@ function renderArticles() {
 
                    <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("8")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -472,7 +472,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("9")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -543,7 +543,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("10")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -590,7 +590,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("11")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -644,7 +644,7 @@ function renderArticles() {
 
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
-                            <div class="comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
+                            <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
                             <div class="likes"><i class="${loadClassLike("12")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
@@ -721,18 +721,20 @@ $(".go-article-content").click(function() {
 });
 
 //TODO: no funciona.
-$(".comments").click(function() {
-    console.log("Comentarios");
-    
-    let target = "article.html#comments-list";
 
+$(".go-comments").click(function() {
+    
+    if (window.location.pathname == "/") {
+        window.location.href = "./article.html#comments-list";
+    }
+
+    //$(".comments").toggleClass("hidden");
+    //$(".comments-title i").toggleClass("fa-caret-up fa-caret-down");
+    
     $('html,body').animate(
-   {
-       scrollTop: $(target).offset().top
-   },2000,function()
-   {
-       location.hash = target;
-   });
+    {
+       scrollTop: $("#comments-list").offset().top
+    }, 2000);
 });
 
 
