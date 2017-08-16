@@ -20,7 +20,8 @@ gulp.task("default", ["sass", "fonts", "html", "js", "img"], function () {
 
     //iniciamos el servidor de desarrollo
     browserSync.init({
-        server: "dist/"
+        //server: "dist/"
+        proxy: "http://127.0.0.1:3100/"
     }); // arranca el servidor en la carpeta src
 
     //observa  cambios en los archivos SASS, y entones ejecuta la tarea 'sass'
