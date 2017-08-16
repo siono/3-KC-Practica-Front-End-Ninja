@@ -1,5 +1,4 @@
 window.$ = window.jQuery = require('jquery');
-
 require ('bootstrap-validator');
 
 function maxWord(text,num){
@@ -26,20 +25,6 @@ $(document).ready(function(){
     // Cancela el envio del formulario
     e.preventDefault();
 
-    /*$('#success_message').slideDown({ opacity: "show" }, "slow") // Mostramos mensaje de exito.
-            $('#contact_form').data('bootstrapValidator').resetForm(); //reseteamos formulario
-            // Cancela el envio del formulario
-            e.preventDefault();
-            // Get the form instance
-            var $form = $(e.target);
-            // Get the BootstrapValidator instance
-            var bv = $form.data('bootstrapValidator');
-            // Use Ajax to submit form data
-            $.post($form.attr('action'), $form.serialize(), function(result) {
-                console.log(result);
-            }, 'json');
-     */
-    
   }
 })
 

@@ -1,5 +1,4 @@
-var $ = require('jquery');
-
+import $ from 'jquery';
 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // Si la pagina hace scroll >= 50px

@@ -1,4 +1,4 @@
-var $=require('jquery');
+window.$ = window.jQuery = require('jquery');
 
 $(".comments-title").click(function(){
     $(".comments").toggleClass("hidden");

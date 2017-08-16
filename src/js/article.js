@@ -1,13 +1,7 @@
-var $ = require('jquery');
 
-var favourites = localStorage.getItem('favourites');
-if (favourites == null){
-    favourites = new Array();
-}else{  
-    favourites = JSON.parse(favourites);  
-}
-
-console.log("Favoritos añadidos a LocalStorage: "+favourites);
+window.$ = window.jQuery = require('jquery');
+import {calculatePublicationDate} from "./utils";
+import {loadClassLike,favourites,setFavourite,deleteFavourite} from "./favourites";
 
 loadArticles();
 
@@ -660,6 +654,8 @@ function renderArticles() {
         return html;
 }
 
+
+
 $(".likes").click(function(){
    
    let favouriteId = $(this).closest('article')[0].dataset.id;
@@ -668,13 +664,13 @@ $(".likes").click(function(){
     //no ha sido añadido a favorito -> lo añado.
    if (icon_heart.hasClass("fa-heart-o")){ 
        console.log("Elemento "+ favouriteId + " añadido a Favorito ");
-       setFavourite(favouriteId);
+       setFavourite(favouriteId,favourites);
    }
    
    // ya estaba como favorito -> lo quito
    if (icon_heart.hasClass("fa-heart")){
        console.log("Elemento "+ favouriteId + " eliminado ");
-       deleteFavourite(favouriteId);
+       deleteFavourite(favouriteId,favourites);
    }
 
    //cambio el icono
@@ -686,40 +682,11 @@ $(".likes").click(function(){
 });
 
 
-function setFavourite(favourite){
-    let key = $.inArray(favourite,favourites);
-    if (key == -1){
-        favourites.push(favourite);
-    }
-}
-
-function deleteFavourite(favourite){
-    let key = $.inArray(favourite,favourites);
-    if (key != -1){
-        favourites.splice(key,1);
-    }
-}
-
-function existFavorite(valor){
-    let key = $.inArray(valor,favourites);
-    if (key == -1) return false;
-    else return true;
-}
-
-function loadClassLike(favourite){
-    if (existFavorite(favourite)){
-        return "fa fa-heart";
-    }else{
-        return "fa fa-heart-o";
-    }
-}
-
 $(".go-article-content").click(function() {
     $('html, body').animate({
         scrollTop: $("#main-content").offset().top
     }, 1000);
 });
-
 
 
 $(".go-comments").click(function() {
@@ -734,40 +701,3 @@ $(".go-comments").click(function() {
     }, 2000);
 
 });
-
-
-function calculatePublicationDate(publicationDate){
-    
-    var unSeg = 1;
-    var unMin = unSeg*60;
-    var unaHora = unMin * 60;
-    var unDia = unaHora * 24;
-    var unaSemana = unDia * 7;
-    var dias_semana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
-    var meses = new Array ("01","02","03","04","05","06","07","08","09","10","11", "12");
-   
-    var systemDate = new Date();
-    var timeagoSeg = Math.floor((systemDate - publicationDate)/1000);
-    
-    if (timeagoSeg < unMin) 
-        return timeagoSeg + " s";
-    else if (timeagoSeg >= unMin && timeagoSeg < unaHora)
-        return Math.floor(timeagoSeg/unMin) + " min";
-    else if (timeagoSeg >= unaHora && timeagoSeg < unDia)
-        return Math.floor(timeagoSeg/unaHora) + " h";
-    else if (timeagoSeg >= unDia && timeagoSeg < unaSemana)
-        return dias_semana[publicationDate.getDay()];
-    else if (timeagoSeg >= unaSemana)
-        return  publicationDate.getDate() + "-" + 
-                meses[publicationDate.getMonth()] + "-" + 
-                publicationDate.getFullYear()+" "+
-                addZero(publicationDate.getUTCHours())+":"+addZero(publicationDate.getUTCMinutes()) +" h";
- 
-}
-
-function addZero(i) {
-    if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
-}

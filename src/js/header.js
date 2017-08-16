@@ -1,4 +1,4 @@
-var $ = require('jquery');
+import $ from 'jquery';
 
 //Fija el valor del select del buscador de la cabecera.
 $('.search-panel .dropdown-menu').find('a').click(function (e) {

@@ -1,9 +1,11 @@
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 
-import "./header.js";
-import "./footer.js";
+import "./header";
+import "./footer";
+import "./favourites";
 import "./article";
+
 import "./validation-form";
 
 
