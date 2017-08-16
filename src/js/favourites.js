@@ -22,16 +22,16 @@ export function deleteFavourite(favourite,favourites) {
     }
 }
 
-function existFavorite(valor) {
-    let key = $.inArray(valor, favourites);
-    if (key == -1) return false;
-    else return true;
-}
-
 export function loadClassLike(favourite) {
     if (existFavorite(favourite)) {
         return "fa fa-heart";
     } else {
         return "fa fa-heart-o";
     }
+}
+
+function existFavorite(valor) {
+    let key = $.inArray(valor, favourites);
+    if (key == -1) return false;
+    else return true;
 }

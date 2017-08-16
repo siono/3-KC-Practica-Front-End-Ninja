@@ -33,3 +33,10 @@ function addZero(i) {
     }
     return i;
 }
+
+export function maxWord(text,num){
+    var words = text.split(" ");
+    if (words.length == 0) {return false;}   
+    if (words.length <= num){return true;}
+    return false;
+}

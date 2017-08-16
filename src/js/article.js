@@ -654,8 +654,6 @@ function renderArticles() {
         return html;
 }
 
-
-
 $(".likes").click(function(){
    
    let favouriteId = $(this).closest('article')[0].dataset.id;
