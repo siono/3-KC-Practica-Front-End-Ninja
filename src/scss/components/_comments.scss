@@ -85,3 +85,32 @@ form.newcomments{
     left: 50%;
     margin-left: -33px;
 }
+
+.comments-list{
+    
+    padding-bottom: 100px;
+
+    .ui-status{
+        display: none;
+    }
+    &.empty{
+        .ui-status.empty{ 
+            display:block
+        }
+    }
+    &.error{
+        .ui-status.error{ 
+            display:block
+        }
+    }
+    &.loading{
+        .ui-status.loading{ 
+            display:block
+        }
+    }
+    &.ideal{
+        .ui-status.ideal{ 
+            display:block
+        }
+    }
+}
