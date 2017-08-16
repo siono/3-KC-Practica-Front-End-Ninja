@@ -720,7 +720,7 @@ $(".go-article-content").click(function() {
     }, 1000);
 });
 
-//TODO: no funciona.
+
 
 $(".go-comments").click(function() {
     
@@ -728,13 +728,11 @@ $(".go-comments").click(function() {
         window.location.href = "./article.html#comments-list";
     }
 
-    //$(".comments").toggleClass("hidden");
-    //$(".comments-title i").toggleClass("fa-caret-up fa-caret-down");
-    
     $('html,body').animate(
     {
        scrollTop: $("#comments-list").offset().top
     }, 2000);
+
 });
 
 
