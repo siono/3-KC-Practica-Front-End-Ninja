@@ -1,17 +1,18 @@
 window.$ = window.jQuery = require('jquery');  //JQuery no puede ser importado con ECMA6 por eso utilizamos require
 
-import { CommentsService } from "./CommentsService";
-//Cargamos la lista de comentarios con AJAX
+import { CommentsService } from "./services/CommentsService";
+import { UIManager } from "./services/UIManager";
 
 //creamos la instancia
 const commentsService = new CommentsService("/comments");
+const commentsListUIManager = new UIManager(".comments-list");
 
 commentsService.list(
     comments => {
         if (comments.length == 0) {
 
             //mostramos el estado vacio
-            $(".comments-list").removeClass("loading").addClass("empty");
+            commentsListUIManager.setEmpty();
 
         } else {
 
@@ -26,7 +27,7 @@ commentsService.list(
                 <div class="text">
                     <p>${comment.mensaje}</p>
                 </div>
-                <p class="attribution">by <a href="mailto:${comment.email}">${comment.nombre} ${comment.apellidos}</a> el ${comment.fecha_publicacion}</p>
+                <p class="attribution">por <a href="mailto:${comment.email}">${comment.nombre} ${comment.apellidos}</a> el ${comment.fecha_publicacion}</p>
                 </div>
                 </article>`;
             }
@@ -34,12 +35,12 @@ commentsService.list(
             $(".comments-list .ui-status.ideal").html(html);
 
             //Quitamos el mensaje de cargando y mostramos el loading.
-            $(".comments-list").removeClass("loading").addClass("ideal");
+            commentsListUIManager.setIdeal();
         }
     },
     error => {
         //mostramos el estado error
-        $(".comments-list").removeClass("loading").addClass("error");
+        commentsListUIManager.setError();
         console.error("Error al recuperar los comentarios", error);
     }
 );
