@@ -9,7 +9,7 @@ $.ajax({
 
             //mostramos el estado vacio
             $(".comments-list").removeClass("loading").addClass("empty");
-            
+
         } else {
 
             let html = '';
@@ -37,5 +37,6 @@ $.ajax({
     error: error => {
         //mostramos el estado error
         $(".comments-list").removeClass("loading").addClass("error");
+        console.error("Error al recuperar los comentarios", error);
     }
 });
