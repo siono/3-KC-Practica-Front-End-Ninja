@@ -1,10 +1,13 @@
-window.$ = window.jQuery = require('jquery');  //JQuery no puede ser importado con ECMA6
+window.$ = window.jQuery = require('jquery');  //JQuery no puede ser importado con ECMA6 por eso utilizamos require
 
+import { CommentsService } from "./CommentsService";
 //Cargamos la lista de comentarios con AJAX
 
-$.ajax({
-    url: "/comments",
-    success: comments => {
+//creamos la instancia
+const commentsService = new CommentsService("/comments");
+
+commentsService.list(
+    comments => {
         if (comments.length == 0) {
 
             //mostramos el estado vacio
@@ -23,7 +26,7 @@ $.ajax({
                 <div class="text">
                     <p>${comment.mensaje}</p>
                 </div>
-                <p class="attribution">by <a href="${comment.email}">${comment.nombre} ${comment.apellidos}</a> el ${comment.fecha_publicacion}</p>
+                <p class="attribution">by <a href="mailto:${comment.email}">${comment.nombre} ${comment.apellidos}</a> el ${comment.fecha_publicacion}</p>
                 </div>
                 </article>`;
             }
@@ -34,9 +37,9 @@ $.ajax({
             $(".comments-list").removeClass("loading").addClass("ideal");
         }
     },
-    error: error => {
+    error => {
         //mostramos el estado error
         $(".comments-list").removeClass("loading").addClass("error");
         console.error("Error al recuperar los comentarios", error);
     }
-});
+);
