@@ -1,7 +1,7 @@
 {
     "comments":[
-        { "id": 1, "nombre": "José Carlos", "apellidos": "Esteban", "email": "jc.esteban@gmail.com", "url_avatar": "https://cdn-images-1.medium.com/fit/c/100/100/1*BrtNhF4Bmy2_pRNHkIDF2g.jpeg" ,"mensaje": "Hello, this is an example from me"},
-        { "id": 2, "nombre": "Angel", "apellidos": "Fermin", "email": "jf@gmail.com", "url_avatar": "https://static2.fjcdn.com/thumbnails/comments/My+first+girlfriend+turned+into+the+moon+_d870112bf10466ffbc63e03dc81f3a74.png" ,"mensaje": "Hello, this is an example from me"}
+        { "id": 1, "nombre": "José Carlos", "apellidos": "Esteban", "email": "jc.esteban@gmail.com", "url_avatar": "https://cdn-images-1.medium.com/fit/c/100/100/1*BrtNhF4Bmy2_pRNHkIDF2g.jpeg" ,"mensaje": "Hello, this is an example from me", "fecha_publicacion": "27-07-2017 18:58 h"},
+        { "id": 2, "nombre": "Angel", "apellidos": "Fermin", "email": "jf@gmail.com", "url_avatar": "https://static2.fjcdn.com/thumbnails/comments/My+first+girlfriend+turned+into+the+moon+_d870112bf10466ffbc63e03dc81f3a74.png" ,"mensaje": "Hello, this is an example from me", "fecha_publicacion": "27-07-2017 18:58 h"}
         
     ]
 }

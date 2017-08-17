@@ -2,6 +2,7 @@
 window.$ = window.jQuery = require('jquery');
 import {calculatePublicationDate} from "./utils";
 import {loadClassLike,favourites,setFavourite,deleteFavourite} from "./favourites";
+import "./comments";
 
 loadArticles();
 
