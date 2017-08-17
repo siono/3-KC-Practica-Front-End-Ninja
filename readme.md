@@ -8,7 +8,7 @@ And run the development server with two terminal:
 
 Terminal 1 : Execute API-Rest json-server
 
-```$ npm server run ```
+```$ npm run server ```
 
 Terminal 2 : Execute Gulp
 
