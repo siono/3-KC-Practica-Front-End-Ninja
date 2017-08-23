@@ -7,19 +7,23 @@ import { UIManager } from "./services/UIManager";
 const commentsService = new CommentsService("/comments");
 const commentsListUIManager = new UIManager(".comments-list");
 
-commentsService.list(
-    comments => {
-        if (comments.length == 0) {
+//cargamos los comentarios cuando el div comments-list sea visible al hacer scroll
+$(window).scroll(function () {
+    if ($(window).scrollTop() + $(window).height() >= $('#comments-list').offset().top) {
+        console.log("DIV de comentarios visible");
+        commentsService.list(
+            comments => {
+                if (comments.length == 0) {
 
-            //mostramos el estado vacio
-            commentsListUIManager.setEmpty();
+                    //mostramos el estado vacio
+                    commentsListUIManager.setEmpty();
 
-        } else {
+                } else {
 
-            let html = '';
+                    let html = '';
 
-            for (let comment of comments) {
-                html += `<article class="comment">
+                    for (let comment of comments) {
+                        html += `<article class="comment">
                 <a class="comment-img">
                     <img src="${comment.url_avatar}" alt="${comment.nombre} ${comment.apellidos}" width="50" height="50">
                 </a>
@@ -30,17 +34,19 @@ commentsService.list(
                 <p class="attribution">por <a href="mailto:${comment.email}">${comment.nombre} ${comment.apellidos}</a> el ${comment.fecha_publicacion}</p>
                 </div>
                 </article>`;
-            }
-            
-            $(".comments-list .ui-status.ideal").html(html);
+                    }
 
-            //Quitamos el mensaje de cargando y mostramos el loading.
-            commentsListUIManager.setIdeal();
-        }
-    },
-    error => {
-        //mostramos el estado error
-        commentsListUIManager.setError();
-        console.error("Error al recuperar los comentarios", error);
-    }
-);
+                    $(".comments-list .ui-status.ideal").html(html);
+
+                    //Quitamos el mensaje de cargando y mostramos el loading.
+                    commentsListUIManager.setIdeal();
+                }
+            },
+            error => {
+                //mostramos el estado error
+                commentsListUIManager.setError();
+                console.error("Error al recuperar los comentarios", error);
+            }
+        );
+    } 
+});
