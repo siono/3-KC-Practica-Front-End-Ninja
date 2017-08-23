@@ -1,4 +1,5 @@
 const $ = require("jquery");
+import {calculatePublicationDate} from "../utils";
 
 export default class CommentsListManager {
 
@@ -57,7 +58,7 @@ export default class CommentsListManager {
             <div class="text">
                 <p>${comment.mensaje}</p>
             </div>
-            <p class="attribution">por <a href="mailto:${comment.email}">${comment.nombre} ${comment.apellidos}</a> el ${comment.fecha_publicacion}</p>
+            <p class="attribution">por <a href="mailto:${comment.email}">${comment.nombre} ${comment.apellidos}</a>, ${calculatePublicationDate(new Date(comment.fecha_publicacion))}</p>
         </div>
         </article>`;
     }
