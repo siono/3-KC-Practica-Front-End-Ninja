@@ -40,20 +40,24 @@ export default class CommentsListManager {
         let html = '';
         
         for (let comment of comments) {
-            html += `<article class="comment">
-            <a class="comment-img">
-                <img src="${comment.url_avatar}" alt="${comment.nombre} ${comment.apellidos}" width="50" height="50">
-            </a>
-            <div class="comment-body">
-                <div class="text">
-                    <p>${comment.mensaje}</p>
-                </div>
-                <p class="attribution">por <a href="mailto:${comment.email}">${comment.nombre} ${comment.apellidos}</a> el ${comment.fecha_publicacion}</p>
-            </div>
-            </article>`;
+            html += this.renderComment(comment);
         }
         //Metemos el HTML en el div que contiene los comentarios
         this.commentsListUIManager.setIdealHtml(html);
+    }
+
+    renderComment(comment){
+        return `<article class="comment">
+        <a class="comment-img">
+            <img src="${comment.url_avatar}" alt="${comment.nombre} ${comment.apellidos}" width="50" height="50">
+        </a>
+        <div class="comment-body">
+            <div class="text">
+                <p>${comment.mensaje}</p>
+            </div>
+            <p class="attribution">por <a href="mailto:${comment.email}">${comment.nombre} ${comment.apellidos}</a> el ${comment.fecha_publicacion}</p>
+        </div>
+        </article>`;
     }
 
 
