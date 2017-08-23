@@ -29,6 +29,16 @@
       "fecha_publicacion": "Wed Aug 23 2017 20:56:13 GMT+0200 (CEST)",
       "newId": "1",
       "id": 3
+    },
+    {
+      "nombre": "Marta",
+      "apellidos": "Jurado",
+      "email": "marta@gmail.com",
+      "url_avatar": "",
+      "mensaje": "Esto es un comentario de un usuario sin avatar",
+      "fecha_publicacion": "Wed Aug 23 2017 21:14:21 GMT+0200 (CEST)",
+      "newId": "1",
+      "id": 4
     }
   ]
 }

@@ -47,6 +47,8 @@ export default class CommentsListManager {
     }
 
     renderComment(comment){
+        if (comment.url_avatar == "") comment.url_avatar = "/images/default-user-image.png"
+
         return `<article class="comment">
         <a class="comment-img">
             <img src="${comment.url_avatar}" alt="${comment.nombre} ${comment.apellidos}" width="50" height="50">
