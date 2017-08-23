@@ -7,6 +7,10 @@
     <!-- Mensaje OK -->
     <div class="alert alert-success" role="alert" id="success_message"><i class="glyphicon glyphicon-thumbs-up"></i> Se ha introducido su comentario correctamente!.</div>
 
+    <!-- Mensaje ERROR -->
+    <div class="alert alert-danger" role="alert" id="error_message"><i class="glyphicon glyphicon-exclamation-sign"></i> <strong>Error : </strong> No se ha creado el comentario. Vuelve a intentarlo en otro momento.</div>
+
+
     <!-- Formulario Insertar comentario -->
     <form class="newcomments" id="comment-form">
 
@@ -38,7 +42,7 @@
         <div class="form-group">
             <label for="url_avatar" class="col-2 col-form-label">Avatar</label>
             <div class="col-10">
-                <input class="form-control" type="url" placeholder="Introduce url avatar" id="url_avatar">
+                <input class="form-control" type="url" placeholder="http://..." id="url_avatar">
                 <div class="help-block with-errors"></div>
             </div>
 
@@ -54,16 +58,16 @@
     <!-- Listado de comentarios -->
     <section class="comments-list loading" id="comments-list">
 
-        <div class="ui-status empty">
+        <div class="alert alert-info ui-status empty">
             No hay ningún comentario
         </div>
 
-        <div class="ui-status error">
-            Se ha producido un error
+        <div class="alert alert-danger ui-status error">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Se ha producido un error al recuperar el listado de comentarios
         </div>
 
-        <div class="ui-status loading">
-            Cargando comentarios...
+        <div class="alert alert-warning ui-status loading">
+            <i class="fa fa-refresh fa-spin fa-fw"></i> Cargando comentarios...
         </div>
 
         <div class="ui-status ideal">

@@ -114,3 +114,7 @@ form.newcomments{
         }
     }
 }
+
+//ocultamos iniciamente los mensajes del formulario.
+
+#success_message, #error_message{ display: none;}

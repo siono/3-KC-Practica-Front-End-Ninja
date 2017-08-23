@@ -13,6 +13,7 @@ $(document).ready(function(){
   }).on('submit', function (e) {
   if (e.isDefaultPrevented()) {
     //Error formulario
+    $('#error_message').slideDown({ opacity: "show" }, "slow"); // Mostramos mensaje de error.
   } else {
     //Exito
     $('#success_message').slideDown({ opacity: "show" }, "slow"); // Mostramos mensaje de exito.
