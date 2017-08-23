@@ -26,11 +26,12 @@
 }
 
 .article-content{
-    //padding: 15px 50px 100px 50px;
+    
     & .description{
         font-size: 23px;
         text-align: center;
         font-weight: bold;
+        margin-top: 40px;
 
         & .category a{
             color: $color-category;
