@@ -7,7 +7,7 @@ import "./comments";
 loadArticles();
 
 function loadArticles() {
-    $('html').find(".item-list").html(renderArticles());
+    $(".item-list").html(renderArticles());
 }
 
 function renderArticles() {
@@ -683,7 +683,7 @@ $(".likes").click(function(){
 
 $(".go-article-content").click(function() {
     $('html, body').animate({
-        scrollTop: $("#main-content").offset().top
+        scrollTop: $("#article-content").offset().top
     }, 1000);
 });
 

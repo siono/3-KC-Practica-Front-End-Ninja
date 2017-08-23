@@ -1,7 +1,7 @@
 const $ = require("jquery");
 
 
-export class UIManager{
+export default class UIManager{
 
     constructor(selector){
         this.uiStateClasses = "empty loading error ideal"; //clases css que definen el estado del componente

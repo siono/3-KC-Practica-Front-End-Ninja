@@ -1,6 +1,6 @@
 const $ = require('jquery');
 
-export class CommentsService{
+export default class CommentsService{
     constructor(url){
         this.url = url;
     }
@@ -16,21 +16,21 @@ export class CommentsService{
     }
 
     //crear comentario
-    create(comment,successCallback, errorCallback){
+    create(comment,successCallback, errorCallback) {
         $.ajax({
             url: this.url,
-            methode: 'post',
             data: comment,
+            method: "post",
             success: successCallback,
             error: errorCallback
-        })
+        });
     }
 
     //borrar comentario
     delete(commentId,successCallback, errorCallback){
         $.ajax({
             url: `${this.url}${commentId}`,
-            methode: 'delete',
+            methode: "delete",
             success: successCallback,
             error: errorCallback
         });
