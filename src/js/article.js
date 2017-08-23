@@ -199,7 +199,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" alt="Avatar"
+                        <img class="avatar" src="/images/default-user-image.png" alt="Avatar"
                             srcset="">
                         <p>Hoddie Allen</p>
                     </div>
@@ -416,7 +416,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" alt="Avatar"
+                        <img class="avatar" src="/images/default-user-image.png" alt="Avatar"
                             srcset="">
                         <p>Hoddie Allen</p>
                     </div>
@@ -632,7 +632,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" alt="Avatar"
+                        <img class="avatar" src="/images/default-user-image.png" alt="Avatar"
                             srcset="">
                         <p>Hoddie Allen</p>
                     </div>
