@@ -23,4 +23,24 @@ export class UIManager{
     setIdeal(){
         this.element.removeClass(this.uiStateClasses).addClass("ideal");
     }
+
+    setEmptyHtml(html){
+        //busca un descendiente de this.element, que tenga la clase CSS ui-status y empty y le asigna el html pasado por parametro.
+        this.element.find(".ui-status.empty").html(html);
+    }
+
+    setLoadingHtml(html){
+        //busca un descendiente de this.element, que tenga la clase CSS ui-status y loading y le asigna el html pasado por parametro.
+        this.element.find(".ui-status.loading").html(html);
+    }
+
+    setErrorHtml(html){
+        //busca un descendiente de this.element, que tenga la clase CSS ui-status y error y le asigna el html pasado por parametro.
+        this.element.find(".ui-status.error").html(html);
+    }
+
+    setIdealHtml(html){
+        //busca un descendiente de this.element, que tenga la clase CSS ui-status e ideal y le asigna el html pasado por parametro.
+        this.element.find(".ui-status.ideal").html(html);
+    }
 }
