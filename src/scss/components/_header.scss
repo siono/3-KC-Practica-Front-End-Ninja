@@ -6,7 +6,6 @@
 			width: 250px;
 		}
 	} 
-	
 	//navbar
 	nav.navbar.fixed-top.navbar-default {
 		border-bottom: 3px solid $color-gold;
@@ -22,20 +21,18 @@
 	.navbar-left .navbar-form {
 		padding: 8px 0;
 		margin: 0;
-	} 
-	
-	//DISPOSITIVOS "GRANDES".
-	@media (min-width: $screen-sm-min) {
-		//LOGO CENTRADO
-	.navbar-brand {
-		&.navbar-brand-centered {
-			position: absolute;
-			left: 50%;
-			margin-left: -125px !important;
-		}
 	}
-		
-
+	 
+	//Dispositivos "grandes"
+	@media (min-width: $screen-sm-min) {
+		//logo centrado
+		.navbar-brand {
+			&.navbar-brand-centered {
+				position: absolute;
+				left: 50%;
+				margin-left: -125px !important;
+			}
+		} 
 		//para que el contenido se pegue lo máx. a los margenes para estar alineados con el contenedor de datos
 		.container>.navbar-collapse,
 		.container>.navbar-header {
@@ -43,17 +40,17 @@
 			margin-left: -30px !important;
 		}
 	} 
-	
-	//Visualiamos menu minimizado en dispositivos menores de 991px;
 	@media (max-width: $screen-md-min) {
+
+		//Visualiamos menu minimizado en dispositivos menores de 991px;
+
 		//logo a la izq.
 		.navbar-brand {
 			&.navbar-brand-centered {
 				position: absolute;
 				padding-left: 15px;
 			}
-			} 
-
+		}
 		.navbar-collapse.collapse {
 			display: none !important;
 		}
@@ -68,7 +65,7 @@
 			float: none;
 		}
 	}
-	
+
 	@media (max-width: $screen_sm_min) {
 		//ocultamos en filtro en dispositivos menores a 768	
 		#filter-botton {
