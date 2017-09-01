@@ -89,7 +89,7 @@ function renderArticles() {
                 <div class="info-interations">
                     <div class="vertical-align pull-right">
                         <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                        <div class="likes"><i class="${loadClassLike("4")}" aria-hidden="true"></i></div>
+                        <div class="likes"><i class="${loadClassLike("2")}" aria-hidden="true"></i></div>
                     </div>
                     <div class="vertical-align">
                         <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 240))}</div>
@@ -205,7 +205,7 @@ function renderArticles() {
                 <div class="info-interations">
                     <div class="vertical-align pull-right">
                         <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                        <div class="likes"><i class="${loadClassLike("2")}" aria-hidden="true"></i></div>
+                        <div class="likes"><i class="${loadClassLike("4")}" aria-hidden="true"></i></div>
                     </div>
                     <div class="vertical-align">
                         <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 15))}</div>
