@@ -39,6 +39,16 @@
       "fecha_publicacion": "Wed Aug 23 2017 21:14:21 GMT+0200 (CEST)",
       "newId": "1",
       "id": 4
+    },
+    {
+      "nombre": "Pepe",
+      "apellidos": "Fernandez",
+      "email": "pep@gmail.com",
+      "url_avatar": "",
+      "mensaje": "Este es un otro comentario sin avatar",
+      "fecha_publicacion": "Wed Aug 23 2017 21:31:52 GMT+0200 (CEST)",
+      "newId": "1",
+      "id": 5
     }
   ]
 }
