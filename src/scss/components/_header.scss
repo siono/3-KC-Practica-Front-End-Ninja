@@ -3,7 +3,7 @@
 		padding: 0px;
 		& img {
 			height: 100%;
-			width: 250px;
+			width: 220px;
 		}
 	} 
 	//navbar
@@ -25,13 +25,13 @@
 	 
 	//Dispositivos "grandes"
 	@media (min-width: $screen-lg-min) {
-		
+
 		//logo centrado
 		.navbar-brand {
 			&.navbar-brand-centered {
 				position: absolute;
 				left: 50%;
-				margin-left: -125px !important;
+				margin-left: -110px !important;
 			}
 		} 
 		//para que el contenido se pegue lo máx. a los margenes para estar alineados con el contenedor de datos
