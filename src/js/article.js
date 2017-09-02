@@ -13,10 +13,14 @@ function loadArticles() {
 function renderArticles() {
     var html = `
         
-        <article class="col-md-6 col-lg-6" data-id="1">
+        <article class="col-sm-6 col-md-6 col-lg-6" data-id="1">
             <div class="item">
                 <div class="item-info break_word">
-                    <img class="thumb" src="../images/articles/art-1.jpg" alt="International Artist Feature: Malaysia" srcset="">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="../images/articles/art-1-500px.jpg 500w, ../images/articles/art-1-1000px.jpg 1000w">
+                        <source media="(min-width:768px)" srcset="../images/articles/art-1-500px.jpg 5000w, ../images/articles/art-1-1000px.jpg 1000w">
+                        <img class="thumb" src="../images/articles/art-1-1500px.jpg" srcset="../images/articles/art-1-500px.jpg 500w, ../images/articles/art-1-1000px.jpg 1000w, ../images/articles/art-1-1500px.jpg 1500w">
+                    </picture>
                     <div class="text-info">
                         <a href="/article.html">
                             <h1>International Artist Feature: Malaysia</h1>
@@ -31,7 +35,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="../images/editors/ed_1.jpeg" alt="Hoddie Allen" srcset="">
+                        <img class="avatar" src="../images/editors/ed_1.jpg" alt="Hoddie Allen" srcset="">
                         <p>Hoddie Allen</p>
                     </div>
 
@@ -48,7 +52,7 @@ function renderArticles() {
             </div>
         </article>
 
-        <article class="col-md-6 col-lg-6" data-id="2">
+        <article class="col-sm-6 col-md-6 col-lg-6" data-id="2">
             <div class="item">
             <div class="item-info break_word">
                 <video class="thumb" poster="../images/articles/art-2.jpg"
@@ -81,7 +85,7 @@ function renderArticles() {
 
             <div class="footer-item">
                 <div class="autor vertical-align">
-                    <img class="avatar" src="/images/default-user-image.png" alt="Avatar"
+                    <img class="avatar" src="/images/default-user-image.jpg" alt="Avatar"
                         srcset="">
                     <p>Jack Sparrow</p>
                 </div>
@@ -100,10 +104,14 @@ function renderArticles() {
             </div>
         </article>
         
-        <article class="col-md-6 col-lg-3" data-id="3">
+        <article class="col-sm-6 col-md-6 col-lg-3" data-id="3">
             <div class="item">
                 <div class="item-info break_word">
-                    <img class="thumb" src="../images/articles/art-3.jpg" alt="The art of pictures" srcset="">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="../images/articles/art-3-500px.jpg 500w, ../images/articles/art-3-1000px.jpg 1000w">
+                    <source media="(min-width:768px)" srcset="../images/articles/art-3-500px.jpg 5000w, ../images/articles/art-3-1000px.jpg 1000w">
+                    <img class="thumb" src="../images/articles/art-3-1500px.jpg" srcset="../images/articles/art-3-500px.jpg 500w, ../images/articles/art-3-1000px.jpg 1000w, ../images/articles/art-3-1500px.jpg 1500w">
+                </picture>
                     <div class="text-info">
                         <a href="/article.html">
                             <h1>The art of pictures</h1>
@@ -127,7 +135,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="../images/editors/ed_3.jpeg" alt="Peter Smith" srcset="">
+                        <img class="avatar" src="../images/editors/ed_3.jpg" alt="Peter Smith" srcset="">
                         <p>Peter Smith</p>
                     </div>
 
@@ -147,7 +155,7 @@ function renderArticles() {
             </div>
         </article>
 
-        <article class="col-md-6 col-lg-3" data-id="4">
+        <article class="col-sm-6 col-md-6 col-lg-3" data-id="4">
             <div class="item">
             <div class="item-info break_word">
 
@@ -198,7 +206,7 @@ function renderArticles() {
 
             <div class="footer-item">
                 <div class="autor vertical-align">
-                    <img class="avatar" src="../images/editors/ed_4.jpeg" alt="Avatar" srcset="">
+                    <img class="avatar" src="../images/editors/ed_4.jpg" alt="Avatar" srcset="">
                     <p>Marcus Logan</p>
                 </div>
 
@@ -218,10 +226,14 @@ function renderArticles() {
             </div>
         </article>
 
-        <article class="col-md-6 col-lg-3" data-id="5">
+        <article class="col-sm-6 col-md-6 col-lg-3" data-id="5">
             <div class="item">
                 <div class="item-info break_word">
-                    <img class="thumb" src="../images/articles/art-5.jpg" alt="The Simpsons" srcset="">
+                    <picture>
+                        <source media="(min-width:1200px)" srcset="../images/articles/art-5-500px.jpg 500w, ../images/articles/art-5-1000px.jpg 1000w">
+                        <source media="(min-width:768px)" srcset="../images/articles/art-5-500px.jpg 5000w, ../images/articles/art-5-1000px.jpg 1000w">
+                        <img class="thumb" src="../images/articles/art-5-1500px.jpg" srcset="../images/articles/art-5-500px.jpg 500w, ../images/articles/art-5-1000px.jpg 1000w, ../images/articles/art-5-1500px.jpg 1500w">
+                    </picture>
                     <div class="text-info">
                         <a href="/article.html">
                             <h1>'The Simpsons' dismissed its composer after 27 years</h1>
@@ -245,7 +257,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="../images/editors/ed_5.jpeg" alt="Alice Morgan" srcset="">
+                        <img class="avatar" src="../images/editors/ed_5.jpg" alt="Alice Morgan" srcset="">
                         <p>Alice Morgan</p>
                     </div>
 
@@ -265,7 +277,7 @@ function renderArticles() {
             </div>
         </article>
 
-        <article class="col-md-6 col-lg-3" data-id="6">
+        <article class="col-sm-6 col-md-6 col-lg-3" data-id="6">
             <div class="item">
                 <div class="item-info break_word">
 
@@ -316,7 +328,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="../images/editors/ed_6.jpeg" alt="Francesca Dannelo" srcset="">
+                        <img class="avatar" src="../images/editors/ed_6.jpg" alt="Francesca Dannelo" srcset="">
                         <p>Francesca Dannelo</p>
                     </div>
 
@@ -336,10 +348,14 @@ function renderArticles() {
             </div>
         </article>
 
-        <article class="col-md-6 col-lg-3" data-id="7">
+        <article class="col-sm-6 col-md-6 col-lg-3" data-id="7">
             <div class="item">
                 <div class="item-info break_word">
-                    <img class="thumb" src="../images/articles/art-7.jpg" alt="Articulo" srcset="">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="../images/articles/art-7-500px.jpg 500w, ../images/articles/art-7-1000px.jpg 1000w">
+                    <source media="(min-width:768px)" srcset="../images/articles/art-3-500px.jpg 5000w, ../images/articles/art-7-1000px.jpg 1000w">
+                    <img class="thumb" src="../images/articles/art-7-1500px.jpg" srcset="../images/articles/art-7-500px.jpg 500w, ../images/articles/art-7-1000px.jpg 1000w, ../images/articles/art-7-1500px.jpg 1500w">
+                </picture>
                     <div class="text-info">
                         <a href="/article.html">
                             <h1>Cryptoeconomics: Paving the Future of Blockchain Technology</h1>
@@ -363,7 +379,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                 <div class="autor vertical-align">
-                <img class="avatar" src="../images/editors/ed_1.jpeg" alt="Hoddie Allen" srcset="">
+                <img class="avatar" src="../images/editors/ed_1.jpg" alt="Hoddie Allen" srcset="">
                 <p>Hoddie Allen</p>
             </div>
 
@@ -383,7 +399,7 @@ function renderArticles() {
             </div>
         </article>
 
-        <article class="col-md-6 col-lg-3" data-id="8">
+        <article class="col-sm-6 col-md-6 col-lg-3" data-id="8">
             <div class="item">
                 <div class="item-info break_word">
                     <video class="thumb" poster="../images/articles/art-8.jpg"
@@ -416,7 +432,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="/images/default-user-image.png" alt="Avatar"
+                        <img class="avatar" src="/images/default-user-image.jpg" alt="Avatar"
                     srcset="">
                         <p>Jack Sparrow</p>
                     </div>
@@ -434,10 +450,14 @@ function renderArticles() {
             </div>
         </article>
 
-        <article class="col-md-6 col-lg-3" data-id="9">
+        <article class="col-sm-6 col-md-6 col-lg-3" data-id="9">
             <div class="item">
                 <div class="item-info break_word">
-                    <img class="thumb" src="../images/articles/art-9.jpg" alt="Articulo" srcset="">
+                <picture>
+                    <source media="(min-width:1200px)" srcset="../images/articles/art-9-500px.jpg 500w, ../images/articles/art-9-1000px.jpg 1000w">
+                    <source media="(min-width:768px)" srcset="../images/articles/art-9-500px.jpg 5000w, ../images/articles/art-9-1000px.jpg 1000w">
+                    <img class="thumb" src="../images/articles/art-9-1500px.jpg" srcset="../images/articles/art-9-500px.jpg 500w, ../images/articles/art-9-1000px.jpg 1000w, ../images/articles/art-9-1500px.jpg 1500w">
+                </picture>
                     <div class="text-info">
                         <a href="/article.html">
                             <h1>Working hard</h1>
@@ -461,7 +481,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                 <div class="autor vertical-align">
-                    <img class="avatar" src="../images/editors/ed_5.jpeg" alt="Alice Morgan" srcset="">
+                    <img class="avatar" src="../images/editors/ed_5.jpg" alt="Alice Morgan" srcset="">
                     <p>Alice Morgan</p>
                 </div>
 
@@ -481,7 +501,7 @@ function renderArticles() {
             </div>
         </article>
 
-        <article class="col-md-6 col-lg-3" data-id="10">
+        <article class="col-sm-6 col-md-6 col-lg-3" data-id="10">
             <div class="item">
                 <div class="item-info break_word">
 
@@ -532,7 +552,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                 <div class="autor vertical-align">
-                <img class="avatar" src="../images/editors/ed_6.jpeg" alt="Francesca Dannelo" srcset="">
+                <img class="avatar" src="../images/editors/ed_6.jpg" alt="Francesca Dannelo" srcset="">
                 <p>Francesca Dannelo</p>
             </div>
 

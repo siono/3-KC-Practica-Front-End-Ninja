@@ -13,6 +13,8 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer"); //añade los prefijos para que sea compatibles con navegadore antiguos
 var cssnano = require("cssnano"); //minificar el css
 var concat = require('gulp-concat'); //concatena ficheros
+var imagemin = require('gulp-imagemin'); //comprime el peso de las imagenes
+//var responsive = require('gulp-responsive'); //crea las imagenes en diferentes tamaños
 
 
 //definir la tarea por defecto
@@ -107,9 +109,10 @@ gulp.task('fonts', function () {
 });
 
 /**
- * Mueve las imagenes
+ * Tarea que optimiza las imagenes
  */
 gulp.task('img', function () {
     gulp.src('src/images/**/*')
+        .pipe(imagemin()) //optimizamos el peso de las imagenes
         .pipe(gulp.dest('dist/images/'));
 });
