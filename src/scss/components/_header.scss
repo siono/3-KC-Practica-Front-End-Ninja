@@ -24,7 +24,8 @@
 	}
 	 
 	//Dispositivos "grandes"
-	@media (min-width: $screen-sm-min) {
+	@media (min-width: $screen-lg-min) {
+		
 		//logo centrado
 		.navbar-brand {
 			&.navbar-brand-centered {
@@ -40,17 +41,11 @@
 			margin-left: -30px !important;
 		}
 	} 
-	@media (max-width: $screen-md-min) {
 
-		//Visualiamos menu minimizado en dispositivos menores de 991px;
+	//Dispositivos "pequeños"
+	@media (max-width: $screen-lg-min) {
 
-		//logo a la izq.
-		.navbar-brand {
-			&.navbar-brand-centered {
-				position: absolute;
-				padding-left: 15px;
-			}
-		}
+		//Visualiamos menu minimizado
 		.navbar-collapse.collapse {
 			display: none !important;
 		}
@@ -64,10 +59,19 @@
 		.navbar-header {
 			float: none;
 		}
+
+		//logo a la izq.
+		.navbar-brand {
+			&.navbar-brand-centered {
+				position: absolute;
+				padding-left: 15px;
+			}
+		}
+		
 	}
 
-	@media (max-width: $screen_sm_min) {
-		//ocultamos en filtro en dispositivos menores a 768	
+	@media (max-width: $screen_md_min) {
+		//ocultamos en filtro	
 		#filter-botton {
 			display: none;
 		}
