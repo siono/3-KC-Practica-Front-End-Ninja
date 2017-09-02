@@ -17,9 +17,9 @@ function renderArticles() {
             <div class="item">
                 <div class="item-info break_word">
                     <picture>
-                        <source media="(min-width:1200px)" srcset="../images/articles/art-1-500px.jpg 500w, ../images/articles/art-1-1000px.jpg 1000w">
-                        <source media="(min-width:768px)" srcset="../images/articles/art-1-500px.jpg 5000w, ../images/articles/art-1-1000px.jpg 1000w">
-                        <img class="thumb" src="../images/articles/art-1-1500px.jpg" srcset="../images/articles/art-1-500px.jpg 500w, ../images/articles/art-1-1000px.jpg 1000w, ../images/articles/art-1-1500px.jpg 1500w">
+                        <source media="(min-width:1200px)" srcset="images/articles/art-1-500px.jpg 500w, images/articles/art-1-1000px.jpg 1000w">
+                        <source media="(min-width:768px)" srcset="images/articles/art-1-500px.jpg 5000w, images/articles/art-1-1000px.jpg 1000w">
+                        <img class="thumb" src="images/articles/art-1-1500px.jpg" srcset="images/articles/art-1-500px.jpg 500w, images/articles/art-1-1000px.jpg 1000w, images/articles/art-1-1500px.jpg 1500w">
                     </picture>
                     <div class="text-info">
                         <a href="/article.html">
@@ -35,7 +35,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="../images/editors/ed_1.jpg" alt="Hoddie Allen" srcset="">
+                        <img class="avatar" src="images/editors/ed_1.jpg" alt="Hoddie Allen" srcset="">
                         <p>Hoddie Allen</p>
                     </div>
 
@@ -55,7 +55,7 @@ function renderArticles() {
         <article class="col-sm-6 col-md-6 col-lg-6" data-id="2">
             <div class="item">
             <div class="item-info break_word">
-                <video class="thumb" poster="../images/articles/art-2.jpg"
+                <video class="thumb" poster="images/articles/art-2.jpg"
                     controls preload>
                     <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
                     <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
@@ -108,9 +108,9 @@ function renderArticles() {
             <div class="item">
                 <div class="item-info break_word">
                 <picture>
-                    <source media="(min-width:1200px)" srcset="../images/articles/art-3-500px.jpg 500w, ../images/articles/art-3-1000px.jpg 1000w">
-                    <source media="(min-width:768px)" srcset="../images/articles/art-3-500px.jpg 5000w, ../images/articles/art-3-1000px.jpg 1000w">
-                    <img class="thumb" src="../images/articles/art-3-1500px.jpg" srcset="../images/articles/art-3-500px.jpg 500w, ../images/articles/art-3-1000px.jpg 1000w, ../images/articles/art-3-1500px.jpg 1500w">
+                    <source media="(min-width:1200px)" srcset="images/articles/art-3-500px.jpg 500w, images/articles/art-3-1000px.jpg 1000w">
+                    <source media="(min-width:768px)" srcset="images/articles/art-3-500px.jpg 5000w, images/articles/art-3-1000px.jpg 1000w">
+                    <img class="thumb" src="images/articles/art-3-1500px.jpg" srcset="images/articles/art-3-500px.jpg 500w, images/articles/art-3-1000px.jpg 1000w, images/articles/art-3-1500px.jpg 1500w">
                 </picture>
                     <div class="text-info">
                         <a href="/article.html">
@@ -135,7 +135,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="../images/editors/ed_3.jpg" alt="Peter Smith" srcset="">
+                        <img class="avatar" src="images/editors/ed_3.jpg" alt="Peter Smith" srcset="">
                         <p>Peter Smith</p>
                     </div>
 
@@ -206,7 +206,7 @@ function renderArticles() {
 
             <div class="footer-item">
                 <div class="autor vertical-align">
-                    <img class="avatar" src="../images/editors/ed_4.jpg" alt="Avatar" srcset="">
+                    <img class="avatar" src="images/editors/ed_4.jpg" alt="Avatar" srcset="">
                     <p>Marcus Logan</p>
                 </div>
 
@@ -230,9 +230,9 @@ function renderArticles() {
             <div class="item">
                 <div class="item-info break_word">
                     <picture>
-                        <source media="(min-width:1200px)" srcset="../images/articles/art-5-500px.jpg 500w, ../images/articles/art-5-1000px.jpg 1000w">
-                        <source media="(min-width:768px)" srcset="../images/articles/art-5-500px.jpg 5000w, ../images/articles/art-5-1000px.jpg 1000w">
-                        <img class="thumb" src="../images/articles/art-5-1500px.jpg" srcset="../images/articles/art-5-500px.jpg 500w, ../images/articles/art-5-1000px.jpg 1000w, ../images/articles/art-5-1500px.jpg 1500w">
+                        <source media="(min-width:1200px)" srcset="images/articles/art-5-500px.jpg 500w, images/articles/art-5-1000px.jpg 1000w">
+                        <source media="(min-width:768px)" srcset="images/articles/art-5-500px.jpg 5000w, images/articles/art-5-1000px.jpg 1000w">
+                        <img class="thumb" src="images/articles/art-5-1500px.jpg" srcset="images/articles/art-5-500px.jpg 500w, images/articles/art-5-1000px.jpg 1000w, images/articles/art-5-1500px.jpg 1500w">
                     </picture>
                     <div class="text-info">
                         <a href="/article.html">
@@ -257,7 +257,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="../images/editors/ed_5.jpg" alt="Alice Morgan" srcset="">
+                        <img class="avatar" src="images/editors/ed_5.jpg" alt="Alice Morgan" srcset="">
                         <p>Alice Morgan</p>
                     </div>
 
@@ -328,7 +328,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                     <div class="autor vertical-align">
-                        <img class="avatar" src="../images/editors/ed_6.jpg" alt="Francesca Dannelo" srcset="">
+                        <img class="avatar" src="images/editors/ed_6.jpg" alt="Francesca Dannelo" srcset="">
                         <p>Francesca Dannelo</p>
                     </div>
 
@@ -352,9 +352,9 @@ function renderArticles() {
             <div class="item">
                 <div class="item-info break_word">
                 <picture>
-                    <source media="(min-width:1200px)" srcset="../images/articles/art-7-500px.jpg 500w, ../images/articles/art-7-1000px.jpg 1000w">
-                    <source media="(min-width:768px)" srcset="../images/articles/art-3-500px.jpg 5000w, ../images/articles/art-7-1000px.jpg 1000w">
-                    <img class="thumb" src="../images/articles/art-7-1500px.jpg" srcset="../images/articles/art-7-500px.jpg 500w, ../images/articles/art-7-1000px.jpg 1000w, ../images/articles/art-7-1500px.jpg 1500w">
+                    <source media="(min-width:1200px)" srcset="images/articles/art-7-500px.jpg 500w, images/articles/art-7-1000px.jpg 1000w">
+                    <source media="(min-width:768px)" srcset="images/articles/art-3-500px.jpg 5000w, images/articles/art-7-1000px.jpg 1000w">
+                    <img class="thumb" src="images/articles/art-7-1500px.jpg" srcset="images/articles/art-7-500px.jpg 500w, images/articles/art-7-1000px.jpg 1000w, images/articles/art-7-1500px.jpg 1500w">
                 </picture>
                     <div class="text-info">
                         <a href="/article.html">
@@ -379,7 +379,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                 <div class="autor vertical-align">
-                <img class="avatar" src="../images/editors/ed_1.jpg" alt="Hoddie Allen" srcset="">
+                <img class="avatar" src="images/editors/ed_1.jpg" alt="Hoddie Allen" srcset="">
                 <p>Hoddie Allen</p>
             </div>
 
@@ -402,7 +402,7 @@ function renderArticles() {
         <article class="col-sm-6 col-md-6 col-lg-3" data-id="8">
             <div class="item">
                 <div class="item-info break_word">
-                    <video class="thumb" poster="../images/articles/art-8.jpg"
+                    <video class="thumb" poster="images/articles/art-8.jpg"
                         controls preload>
                         <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
                         <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
@@ -454,9 +454,9 @@ function renderArticles() {
             <div class="item">
                 <div class="item-info break_word">
                 <picture>
-                    <source media="(min-width:1200px)" srcset="../images/articles/art-9-500px.jpg 500w, ../images/articles/art-9-1000px.jpg 1000w">
-                    <source media="(min-width:768px)" srcset="../images/articles/art-9-500px.jpg 5000w, ../images/articles/art-9-1000px.jpg 1000w">
-                    <img class="thumb" src="../images/articles/art-9-1500px.jpg" srcset="../images/articles/art-9-500px.jpg 500w, ../images/articles/art-9-1000px.jpg 1000w, ../images/articles/art-9-1500px.jpg 1500w">
+                    <source media="(min-width:1200px)" srcset="images/articles/art-9-500px.jpg 500w, images/articles/art-9-1000px.jpg 1000w">
+                    <source media="(min-width:768px)" srcset="images/articles/art-9-500px.jpg 5000w, images/articles/art-9-1000px.jpg 1000w">
+                    <img class="thumb" src="images/articles/art-9-1500px.jpg" srcset="images/articles/art-9-500px.jpg 500w, images/articles/art-9-1000px.jpg 1000w, images/articles/art-9-1500px.jpg 1500w">
                 </picture>
                     <div class="text-info">
                         <a href="/article.html">
@@ -481,7 +481,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                 <div class="autor vertical-align">
-                    <img class="avatar" src="../images/editors/ed_5.jpg" alt="Alice Morgan" srcset="">
+                    <img class="avatar" src="images/editors/ed_5.jpg" alt="Alice Morgan" srcset="">
                     <p>Alice Morgan</p>
                 </div>
 
@@ -552,7 +552,7 @@ function renderArticles() {
 
                 <div class="footer-item">
                 <div class="autor vertical-align">
-                <img class="avatar" src="../images/editors/ed_6.jpg" alt="Francesca Dannelo" srcset="">
+                <img class="avatar" src="images/editors/ed_6.jpg" alt="Francesca Dannelo" srcset="">
                 <p>Francesca Dannelo</p>
             </div>
 
