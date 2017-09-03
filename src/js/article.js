@@ -1,12 +1,17 @@
 
 window.$ = window.jQuery = require('jquery');
+
 import { calculatePublicationDate } from "./utils";
-import { loadClassLike, favourites, setFavourite, deleteFavourite } from "./favourites";
-import "./comments";
+import FavouritesService from "./services/FavouritesService";
+import FavouritesManager from "./services/FavouritesManager";
+
+const favouritesService = new FavouritesService(localStorage.getItem('favourites'));
+const favouritesManager = new FavouritesManager(favouritesService);
 
 loadArticles();
 
 function loadArticles() {
+
     $(".item-list").html(renderArticles());
 }
 
@@ -42,7 +47,7 @@ function renderArticles() {
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
                             <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                            <div class="likes"><i class="${loadClassLike("1")}" aria-hidden="true"></i></div>
+                            <div class="likes"><i class="${favouritesManager.loadClassLike("1")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
                             <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 6000))}</div>
@@ -93,7 +98,7 @@ function renderArticles() {
                 <div class="info-interations">
                     <div class="vertical-align pull-right">
                         <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                        <div class="likes"><i class="${loadClassLike("2")}" aria-hidden="true"></i></div>
+                        <div class="likes"><i class="${favouritesManager.loadClassLike("2")}" aria-hidden="true"></i></div>
                     </div>
                     <div class="vertical-align">
                         <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 240))}</div>
@@ -142,7 +147,7 @@ function renderArticles() {
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
                             <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                            <div class="likes"><i class="${loadClassLike("3")}" aria-hidden="true"></i></div>
+                            <div class="likes"><i class="${favouritesManager.loadClassLike("3")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
                             <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 6000 * 60 * 20))}</div>
@@ -213,7 +218,7 @@ function renderArticles() {
                 <div class="info-interations">
                     <div class="vertical-align pull-right">
                         <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                        <div class="likes"><i class="${loadClassLike("4")}" aria-hidden="true"></i></div>
+                        <div class="likes"><i class="${favouritesManager.loadClassLike("4")}" aria-hidden="true"></i></div>
                     </div>
                     <div class="vertical-align">
                         <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 15))}</div>
@@ -264,7 +269,7 @@ function renderArticles() {
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
                             <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                            <div class="likes"><i class="${loadClassLike("5")}" aria-hidden="true"></i></div>
+                            <div class="likes"><i class="${favouritesManager.loadClassLike("5")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
                             <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 500 * 2))}</div>
@@ -335,7 +340,7 @@ function renderArticles() {
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
                             <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                            <div class="likes"><i class="${loadClassLike("6")}" aria-hidden="true"></i></div>
+                            <div class="likes"><i class="${favouritesManager.loadClassLike("6")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
                             <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 15 * 500))}</div>
@@ -386,7 +391,7 @@ function renderArticles() {
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
                             <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                            <div class="likes"><i class="${loadClassLike("7")}" aria-hidden="true"></i></div>
+                            <div class="likes"><i class="${favouritesManager.loadClassLike("7")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
                             <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 15 * 600))}</div>
@@ -440,7 +445,7 @@ function renderArticles() {
                    <div class="info-interations">
                         <div class="vertical-align pull-right">
                             <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                            <div class="likes"><i class="${loadClassLike("8")}" aria-hidden="true"></i></div>
+                            <div class="likes"><i class="${favouritesManager.loadClassLike("8")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
                             <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 25 * 800))}</div>
@@ -488,7 +493,7 @@ function renderArticles() {
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
                             <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                            <div class="likes"><i class="${loadClassLike("9")}" aria-hidden="true"></i></div>
+                            <div class="likes"><i class="${favouritesManager.loadClassLike("9")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
                             <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 15 * 900))}</div>
@@ -559,7 +564,7 @@ function renderArticles() {
                     <div class="info-interations">
                         <div class="vertical-align pull-right">
                             <div class="go-comments"><i class="fa fa-comment-o" aria-hidden="true">13</i></div>
-                            <div class="likes"><i class="${loadClassLike("10")}" aria-hidden="true"></i></div>
+                            <div class="likes"><i class="${favouritesManager.loadClassLike("10")}" aria-hidden="true"></i></div>
                         </div>
                         <div class="vertical-align">
                             <div class="publication_date"><i class="fa fa-calendar" aria-hidden="true"></i>${calculatePublicationDate(new Date(new Date() - 1000 * 60 * 15 * 2000))}</div>
@@ -581,23 +586,7 @@ $(".likes").click(function () {
     let favouriteId = $(this).closest('article')[0].dataset.id;
     let icon_heart = $(this).find(".fa");
 
-    //no ha sido añadido a favorito -> lo añado.
-    if (icon_heart.hasClass("fa-heart-o")) {
-        console.log("Elemento " + favouriteId + " añadido a Favorito ");
-        setFavourite(favouriteId, favourites);
-    }
-
-    // ya estaba como favorito -> lo quito
-    if (icon_heart.hasClass("fa-heart")) {
-        console.log("Elemento " + favouriteId + " eliminado ");
-        deleteFavourite(favouriteId, favourites);
-    }
-
-    //cambio el icono
-    icon_heart.toggleClass("fa-heart fa-heart-o");
-
-    //guardo el favorito en variable localstore
-    localStorage.setItem('favourites', JSON.stringify(favourites));
+    favouritesManager.clickFavourite(favouriteId,icon_heart);
 
 });
 
