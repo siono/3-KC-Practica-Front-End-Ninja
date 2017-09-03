@@ -2,7 +2,7 @@ window.$ = window.jQuery = require('jquery');  //JQuery no puede ser importado c
 
 import CommentsService from "./services/CommentsService";
 import UIManager from "./services/UIManager";
-import CommentsListManager from "./services/CommentsListManager"
+import CommentsListManager from "./services/CommentsListManager";
 import CommentsFormManager from "./services/CommentsFormManager";
 
 //cargamos los comentarios cuando el div comments-list sea visible al hacer scroll en el detalle articulo
@@ -14,7 +14,7 @@ $(window).scroll(function () {
         const commentsListUIManager = new UIManager(".comments-list");
 
         const commentsListManager = new CommentsListManager(commentsService,commentsListUIManager);
-        commentsListManager.init();
+        commentsListManager.init("1");
 
         const commentsFormManager = new CommentsFormManager('#comment-form',commentsService);
         commentsFormManager.init();

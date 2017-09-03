@@ -5,10 +5,10 @@ export default class CommentsService{
         this.url = url;
     }
 
-    //obtener listado de comentarios
-    list(successCallback, errorCallback){
+    //obtener listado de comentarios de cada noticia
+    list(newId,successCallback, errorCallback){
         $.ajax({
-            url: this.url,
+            url: this.url+"?newId="+newId,
             success: successCallback,
             error: errorCallback
         });

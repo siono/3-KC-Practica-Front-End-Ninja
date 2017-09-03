@@ -8,12 +8,12 @@ export default class CommentsListManager {
         this.commentsListUIManager = commentsListUIManager;
     }
 
-    init() {
-        this.loadComments();
+    init(newId) {
+        this.loadComments(newId);
     }
 
-    loadComments() {
-        this.commentsService.list(
+    loadComments(newId) {
+        this.commentsService.list(newId,
             comments => {
                 if (comments.length == 0) {
 
