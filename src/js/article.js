@@ -576,6 +576,16 @@ function renderArticles() {
 
             </div>
         </article>
+
+        <div class="text-center">
+        <ul class="pagination">
+            <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+            <li><a href="?p=1" data-original-title="" title="">1</a></li> 
+            <li><a href="?p=2" data-original-title="" title="">2</a></li>
+            <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+        </ul>
+        </div>
+    
         `;
 
     return html;
